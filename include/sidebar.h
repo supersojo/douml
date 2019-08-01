@@ -14,6 +14,9 @@ namespace douml
     class Workspace;
 class DU_API SideBar {
 public:
+    SideBar();
+	~SideBar();
+    SideBar(Workspace* ws);
     virtual void CreateSideBar();
     virtual void OnXXXX();
     virtual void OnToolItemClicked(ToolItem *item);

@@ -17,6 +17,8 @@ namespace douml
 
 class DU_API EditorPart {
 public:
+    EditorPart();
+    EditorPart(Workspace* ws);
 	virtual void CreateEditorPart();
     virtual void OnXXXX();
     virtual void OnNewNode(Point& p,Node* n);

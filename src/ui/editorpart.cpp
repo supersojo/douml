@@ -12,6 +12,16 @@
 #include "point.h"
 namespace douml
 {
+
+EditorPart::EditorPart()
+{
+    m_workspace = nullptr;
+}
+EditorPart::EditorPart(Workspace* ws)
+{
+    m_workspace = ws;
+	ws->SetEditorPart(this);
+}
 void EditorPart::CreateEditorPart()
 {
 

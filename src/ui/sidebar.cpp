@@ -10,6 +10,18 @@
 #include "graph.h"
 namespace douml
 {
+SideBar::SideBar()
+{
+    m_workspace = nullptr;
+}
+SideBar::SideBar(Workspace* ws)
+{
+    m_workspace = ws;
+	ws->SetSideBar(this);
+}
+SideBar::~SideBar()
+{
+}
 void SideBar::CreateSideBar()
 {
 
@@ -18,4 +30,10 @@ void SideBar::OnXXXX()
 {
     
 }
+void SideBar::OnToolItemClicked(ToolItem *item)
+{
+
+
+}
+
 }

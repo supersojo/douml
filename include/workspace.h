@@ -16,14 +16,21 @@ namespace douml
 
 class DU_API Workspace {
 public:
+	Workspace();
+	virtual ~Workspace();
     virtual void CreateWorkspace();
     virtual void OnXXXX();
     Graph* GetActiveGraph();
+	void SetEditorPart(EditorPart* ep);
+	void SetSideBar(SideBar* sb);
+	EditorPart* GetEditorPart();
+	SideBar* GetSideBar();
 private:
 	EditorPart* m_editorPart;
     SideBar* m_sideBar;
     du_int m_activeGraphIndex;
     std::vector<Graph*>* m_graphs;
+	void ClearGraphs();
 };
 
 }
