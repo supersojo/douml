@@ -8,6 +8,7 @@
 #include "editorpart.h"
 #include "sidebar.h"
 #include "graph.h"
+#include "classgraph.h"
 namespace douml
 {
 Workspace::Workspace()
@@ -39,9 +40,11 @@ void Workspace::OnXXXX()
 {
     
 }
+static ClassGraph classGraph;
 Graph* Workspace::GetActiveGraph()
 {
-	return nullptr;
+	return &classGraph;// for test
+	//return nullptr;
 }
 void Workspace::SetEditorPart(EditorPart* ep)
 {
